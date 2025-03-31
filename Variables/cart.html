@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Cart</title>
+</head>
+<body>
+    <!-- First Show Quantity button -->
+    <button title="Display all the products saved in cart" class="show-product" 
+    onclick="console.log(`CarCout: ${carCount}`);"
+    >
+        Show Product
+    </button>
+    
+    <!-- Add to Cart -->
+    <button title="Add to Cart" class="add=to-cart" onclick="
+    carCount += 1;
+    console.log(`CarCout: ${carCount}`);
+    ">
+    Add to Cart
+    </button>
+
+    <!-- Increment by 2 -->
+    <button title="Add to Cart" class="increment-2" onclick="
+    carCount += 2;
+    console.log(`CarCout: ${carCount}`);">
+    Increment by 2
+    </button>
+
+    <!-- Increment by 3 -->
+    <button title="Add to Cart" class="increment-3" onclick="
+    carCount += 3;
+    console.log(`CarCout: ${carCount}`);">
+    Increment by 3
+    </button>
+
+    <!-- Reset cart -->
+    <button title="Add to Cart" class="reset-cart" onclick="
+    carCount = 0;
+    console.log('carCount Reset!')
+    console.log(`CarCout: ${carCount}`)">
+    Reset Cart
+    </button>
+    
+    <script>
+        let carCount = 0
+
+    </script>
+</body>
+</html>
