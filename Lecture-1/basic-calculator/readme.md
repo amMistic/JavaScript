@@ -5,11 +5,11 @@
 	<img src="https://img.shields.io/github/languages/count/amMistic/JavaScript?style=default&color=0080ff" alt="repo-language-count">
 </p>
 
-# Modern Calculator
+# Basic Calculator
 
 A sleek, responsive calculator web application with a modern UI built using HTML, CSS, and JavaScript.
 
-![App Demo](Lecture-1/basic-calculator/assets/demo_cal.gif)
+<img src="assets/demo_cal.gif" alt="App Demo" heigth="700px" width="800px">
 
 ## Features
 
@@ -19,10 +19,6 @@ A sleek, responsive calculator web application with a modern UI built using HTML
 - Backspace functionality for correcting input
 - Proper handling of decimal points
 - Smooth hover animations
-
-## Demo
-
-You can see a live demo [here](#) (add your demo link once deployed).
 
 ## Getting Started
 
@@ -35,12 +31,12 @@ You can see a live demo [here](#) (add your demo link once deployed).
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/modern-calculator.git
+   git clone https://github.com/amMistic/JavaScript.git
    ```
 
 2. Navigate to the project directory:
    ```bash
-   cd modern-calculator
+   cd basic-calculator
    ```
 
 3. Open the `index.html` file in your web browser.
@@ -50,7 +46,7 @@ Alternatively, you can simply download the ZIP file of this repository and extra
 ### Project Structure
 
 ```
-modern-calculator/
+basic-calculator/
 ├── index.html      # The main HTML file
 ├── index.css       # Custom CSS styles
 ├── script.js       # JavaScript functionality
