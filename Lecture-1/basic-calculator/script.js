@@ -1,89 +1,77 @@
-// TODO :
-// - Make Efficient and remove redudant code
-// - Handle decimal value
-// - Handle Digit enter after last digit is 0 
-
-
+// get the dom
 const display = document.getElementById('display');
 
-// define initial value 
-display.value = '0'
-
-// Track result status, whether it's shown or not
+// initalized the display value and isResult flag
+display.value = '0';
 let isResult = false;
 
-// Check for events
-document.querySelectorAll('.btn').forEach(
-    button => {
-        button.onclick = () => { // Fix: Corrected typo from "onlcick" to "onclick"
-            // Check if the pressed button is "Clear" button
-            if (button.innerText === 'C') {
-                display.value = '0'; // Clear the display
-                isResult = false; // Reset result flag
-            }
+// define constant operator
+const isOperator = (value) => {
+    return ['+', '-', '/', '*'].includes(value);
+};
 
-            // Check if the pressed button is evaluate expression button
-            else if (button.innerText === '=') {
-                try {
-                    // Evaluate the expression in the display
-                    display.value = eval(display.value);
-                    isResult = true; // Set result flag after evaluation
-                } catch (error) {
-                    // Show error if eval fails
-                    display.value = `Error :/`;
-                    isResult = false;
-                }
-            }
+// reset dispaly
+const resetDisplay = () => {
+    display.value = '0';
+    isResult = false;
+};
 
-            // Check for backspace
-            else if (button.innerText === "backspace") { 
-                if (isResult){
-                    display.value = '0';
-                }
-                else {
-                    display.value = display.value.slice(0, -1); // Remove last character
-
-                }
-            }
-
-            // Check for digits or expressions
-            else {
-                const operators = ['+', '-', '/', '*']; // List of operators
-
-                // If the result is shown and a button is pressed, decide what to do
-                if (isResult) { 
-                    // If the button is not an operator, start a new calculation
-                    if (operators.includes(button.innerText)) {
-                        display.value += button.innerText;
-                        isResult = false; // Reset result flag
-                    }
-                    else {
-                        display.value = button.innerText;
-                        isResult = false;
-                    }
-                }
-                else { 
-                    if (display.value === '0' && !operators.includes(button.innerText)){
-                        display.value = button.innerText;
-                    }
-                    else{
-                        if (display.value.charAt(display.value.length - 1) === '0'){
-                            if (button.innerText === '.'){
-                                display.value += button.value;
-                            }
-                            else{
-                                return ;
-                            }
-                        }
-                        else if (display.value.charAt(display.value.length - 1) === '.' && button.innerText == '.'){
-                            return;
-                        }
-                        else {
-                            display.value += button.innerText; // Add the value of the button to the display
-                        }
-                    }
-                }
-            }
-        };
+// Evaluate Expression
+const evaluateExpression = () =>{
+    try {
+        display.value = eval(display.value);
+        isResult = true;
+    } catch (error) {
+        display.value = 'Error :/';
+        isResult = false;
     }
-);
+};
+
+// handleBackspace logic
+const handleBackspace = () =>{
+    let expressionLength = display.value.length;
+    display.value = isResult ? '0' : display.value.slice(0, expressionLength - 1);
+    isResult = false;
+};
+
+// handling decimal values
+const handleDecimal = (value) => {
+    if (!isResult){
+        const lastSegment = display.value.split(/[\+\-\*\/]/).pop();
+        if (!lastSegment.includes('.')){
+            display.value += value;
+        }
+    }
+};
+
+// append digits
+const appendDigits = (value) => {
+    let expressionLength = display.value.length;
+    let lastChar = display.value.charAt(expressionLength - 1);
+
+    if (display.value === '0' && !isOperator(value)){
+        display.value = value;
+    } else {
+        if (isOperator(lastChar) && isOperator(value)){
+            return;
+        } else {
+            display.value += value;
+        }
+    }
+};
+
+// start with calculator logic
+document.querySelectorAll('.btn').forEach( button => {
+    button.onclick = () =>{
+        if (button.innerText === 'C') resetDisplay();
+        else if (button.innerText === '=') evaluateExpression();
+        else if (button.innerText === 'backspace') handleBackspace();
+        else if (button.innerText === '.') handleDecimal(button.innerText);
+        else if (isResult) { 
+            isResult = false;
+            isOperator(button.innerText) ? appendDigits(button.innerText) : display.value = button.innerText;
+        } else {
+            appendDigits(button.innerText);
+        }
+    };
+});
