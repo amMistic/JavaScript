@@ -9,7 +9,7 @@
 
 A sleek, responsive calculator web application with a modern UI built using HTML, CSS, and JavaScript.
 
-![App Demo](Lecture-1/basic-calculator/assests/demo_cal.gif)
+![App Demo](Lecture-1/basic-calculator/assets/demo_cal.gif)
 
 ## Features
 
