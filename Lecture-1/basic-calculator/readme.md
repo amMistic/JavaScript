@@ -1,8 +1,15 @@
+<p align="center">
+	<img src="https://img.shields.io/github/license/amMistic/JavaScript?style=default&logo=opensourceinitiative&logoColor=white&color=0080ff" alt="license">
+	<img src="https://img.shields.io/github/last-commit/amMistic/JavaScript?style=default&logo=git&logoColor=white&color=0080ff" alt="last-commit">
+	<img src="https://img.shields.io/github/languages/top/amMistic/JavaScript?style=default&color=0080ff" alt="repo-top-language">
+	<img src="https://img.shields.io/github/languages/count/amMistic/JavaScript?style=default&color=0080ff" alt="repo-language-count">
+</p>
+
 # Modern Calculator
 
 A sleek, responsive calculator web application with a modern UI built using HTML, CSS, and JavaScript.
 
-![Modern Calculator](https://placeholder-image.com/calculator-screenshot.png)
+![App Demo](Lecture-1/basic-calculator/assests/demo_cal.gif)
 
 ## Features
 
