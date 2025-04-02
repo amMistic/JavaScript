@@ -3,23 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
-    <title>To-Do List</title>
+    <title> Minmalistic ToDo </title>
 </head>
 <body>
     <div class="container">
-        <div class="todo-app">
-            <h2>To-Do List <img src="./assets/images/to-do-list.png" alt="To-Do Image"></h2>
+        <main class="todo-app">
+            <h2> Minmalistic ToDo List <img src="./assets/images/check-list.png" alt="To-Do Image"></h2>
             <div class="row">
                 <input type="text" id="input-box" placeholder="Add your task">
-                <button>Add</button>
+                <button onclick="addTask()">Add</button>
             </div>
-            <ul id="tasks-container">
-                <li class="checked">Task 1</li>
-                <li>Task 2</li>
-                <li>Task 3</li>
-            </ul>
-        </div>
+            <ul id="tasks-container"></ul>
+        </main>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
