@@ -1,3 +1,10 @@
+<p align="center">
+	<img src="https://img.shields.io/github/license/amMistic/JavaScript?style=default&logo=opensourceinitiative&logoColor=white&color=0080ff" alt="license">
+	<img src="https://img.shields.io/github/last-commit/amMistic/JavaScript?style=default&logo=git&logoColor=white&color=0080ff" alt="last-commit">
+	<img src="https://img.shields.io/github/languages/top/amMistic/JavaScript?style=default&color=0080ff" alt="repo-top-language">
+	<img src="https://img.shields.io/github/languages/count/amMistic/JavaScript?style=default&color=0080ff" alt="repo-language-count">
+</p>
+
 # Minimalistic To-Do List
 
 A simple and elegant to-do list application built using HTML, CSS, and JavaScript. This project is designed to help users manage their daily tasks efficiently.
@@ -8,7 +15,7 @@ A simple and elegant to-do list application built using HTML, CSS, and JavaScrip
 - Minimalistic design with a focus on user experience.
 
 ## Demo
-![App Preview](./assets/demo/demo.gif)
+<img  src="./assets/demo/demo.gif" alt="demo gif">
 
 ## Getting Started
 
@@ -43,7 +50,4 @@ Ensure you have a modern web browser (e.g., Chrome, Firefox) installed.
 - HTML
 - CSS
 - JavaScript
-
-## License
-This project is open-source and available under the MIT License.
 
