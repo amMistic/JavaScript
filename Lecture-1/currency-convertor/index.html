@@ -1,17 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Currency Converter</title>
     <link rel="stylesheet" href="index.css">
+
 </head>
-<body>  
+
+<body>
+    <header class="app-header">
+        <h1>Currency Converter</h1>
+        <p>Convert any currency in real-time with live rates</p>
+    </header>
+
     <div class="container">
-        <main class="converter-app">
-            <h1>Currency Converter</h1>
-            <div class="col">
-                <div class="converter"></div>
-                <div class="chart-graph"></div>
+        <div class="left">
+            <h2 id="rate-label">Loading...</h2>
+            <h1 id="rate-value"></h1>
+
+            <div class="currency-input">
+                <input id="amount1" type="number" class="input-box" value="1" />
+                <select id="currency1"></select>
             </div>
-        </main>
+
+            <div class="currency-input">
+                <input id="amount2" type="number" class="input-box" value="0.012" disabled />
+                <select id="currency2"></select>
+            </div>
+        </div>
+
+        <div class="chart">
+            <canvas id="exchangeChart" width="400" height="300"></canvas>
+        </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="scripts.js"></script>
+</body>
+
 </html>
