@@ -1,0 +1,5 @@
+# environmental file
+Lecture-1/currency-convertor/.env
+package-lock.json
+package.json
+node_modules

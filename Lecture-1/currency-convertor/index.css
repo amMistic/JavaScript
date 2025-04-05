@@ -1,0 +1,30 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: #051923;
+    padding: 10px;
+}
+
+.converter-app {
+    width: 100%;
+    max-width: 740PX;
+    background: #052b3d;
+    margin: 100px auto 100px;
+    padding: 40px 30px 50px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(29, 28, 28, 0.1), 0px 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.converter-app h1 { 
+    color: aquamarine;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
