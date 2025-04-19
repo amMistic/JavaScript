@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JokeFetcher</title>
+
+  <!-- Inter font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="index.css" />
+  <script defer src="app.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <h1>JokeFetcher</h1>
+      <label class="theme-toggle">
+        <input type="checkbox" class="theme-toggle-input" id="theme-toggle" />
+        <span class="theme-slider"></span>
+      </label>
+    </div>
+
+    <!-- Category Buttons -->
+    <div class="category-select">
+      <button class="category-btn active">Random</button>
+      <button class="category-btn">Programming</button>
+      <button class="category-btn">Dad Jokes</button>
+      <button class="category-btn">Puns</button>
+    </div>
+
+    <!-- Joke Display -->
+    <div class="joke-container">
+      <p class="joke-text">Click the button below to fetch a joke!</p>
+      <div class="joke-tools">
+        <span class="loader" style="display: none;">⏳ Loading...</span>
+      </div>
+    </div>
+
+    <!-- Fetch Button -->
+    <button class="btn" id="fetch-joke">Get Joke</button>
+
+    <!-- Footer -->
+    <div class="footer">
+      <p>Brighten your day with a random joke!</p>
+    </div>
+  </div>
+</body>
+</html>
